@@ -84,6 +84,21 @@
       },
       "detailLead": "A case about designing a complex internal product: delivery speed, access control, and system observability."
     },
+    "gauHr": {
+      "title": "HR management registers",
+      "description": "SPA for HR: employee registers, interactive cards, Excel import/export, and role-based access.",
+      "role": "Frontend developer · Vue 3",
+      "period": "2025 — present",
+      "highlights": {
+        "spa": "Vue 3 + Pinia + Vue Router SPA with responsive UI and dark/light theme on Vuetify 4",
+        "card": "Interactive employee card with sections — view and edit without page switches",
+        "rbac": "RBAC: register filtering by groups, route guards, and role-based conditional rendering",
+        "admin": "Admin panel: Excel import with duplicates, cache, bulk edits, and export",
+        "filters": "Advanced filtering with instant updates and persisted filter state",
+        "migration": "Vuex → Pinia and Vuetify 3 → 4 migrations with a shared design standard"
+      },
+      "detailLead": "A case about an HR product: ease of personnel work, access control, and stack migrations without stopping delivery."
+    },
     "elros": {
       "title": "Tourism B2B/B2C ecosystem",
       "description": "Customer-facing web app and organizer admin panel for a tourism service.",
@@ -139,10 +154,24 @@
     "email": "Email",
     "telegram": "Telegram",
     "phone": "Phone",
+    "github": "GitHub",
+    "githubLabel": "GitHub profile",
     "copy": "Copy",
     "copied": "Copied",
     "downloadCv": "Download CV"
   },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "localeSwitcher": "Language switcher",
+    "switchLocale": "Switch language to {locale}",
+    "toggleTheme": "Toggle theme",
+    "scrollToTop": "Back to top"
+  },
+
   "footer": {
     "built": "Built with Nuxt · Vue · TypeScript",
     "rights": "Yaroslav Bragin"

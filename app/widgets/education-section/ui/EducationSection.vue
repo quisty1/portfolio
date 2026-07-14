@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import { educationItems } from '@entities/education/model/types'
+import { educationItems } from '@entities/education/model/data'
 
 const { t } = useI18n()
 </script>
 
 <template>
-  <section
-    id="education"
-    class="scroll-mt-24 py-24 sm:py-28"
-  >
+  <section id="education" class="scroll-mt-24 py-24 sm:py-28">
     <AppContainer>
       <ScrollReveal>
         <AppSectionTitle
@@ -25,9 +22,7 @@ const { t } = useI18n()
           :delay="index * 80"
           class="border-t border-border pt-6"
         >
-          <p class="text-sm text-ink-subtle">
-            {{ t(item.periodKey) }} · {{ t(item.degreeKey) }}
-          </p>
+          <p class="text-sm text-ink-subtle">{{ t(item.periodKey) }} · {{ t(item.degreeKey) }}</p>
           <h3 class="mt-2 font-display text-xl font-semibold text-ink">
             {{ t(item.titleKey) }}
           </h3>

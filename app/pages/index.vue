@@ -21,33 +21,43 @@ const ContactSection = defineAsyncComponent(
 )
 
 const { t, locale } = useI18n()
-const { siteUrl } = usePortfolioSite()
+const { site, siteUrl, githubUrl } = usePortfolioSite()
 
-useSeoMeta({
+const pagePath = computed(() => (locale.value === 'ru' ? '/' : '/en'))
+
+usePageSeo({
   title: () => t('meta.title'),
   description: () => t('meta.description'),
-  ogTitle: () => t('meta.title'),
-  ogDescription: () => t('meta.description'),
+  path: pagePath,
   ogType: 'website',
-  ogUrl: () => `${siteUrl}${locale.value === 'ru' ? '/' : '/en'}`,
-  ogImage: () => `${siteUrl}/og-image.svg`,
-  twitterCard: 'summary_large_image',
-  twitterTitle: () => t('meta.title'),
-  twitterDescription: () => t('meta.description'),
-  twitterImage: () => `${siteUrl}/og-image.svg`,
 })
 
-useHead({
-  htmlAttrs: {
-    lang: () => locale.value,
+useJsonLd(() => [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.nameEn,
+    url: siteUrl,
+    description: t('meta.description'),
+    inLanguage: locale.value === 'ru' ? 'ru-RU' : 'en-US',
   },
-  link: [
-    {
-      rel: 'canonical',
-      href: () => `${siteUrl}${locale.value === 'ru' ? '/' : '/en'}`,
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: site.nameEn,
+    alternateName: site.name,
+    jobTitle: site.role,
+    url: siteUrl,
+    email: site.contact.email,
+    telephone: site.contact.phone,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: site.contact.location,
+      addressCountry: 'RU',
     },
-  ],
-})
+    sameAs: [site.contact.telegramUrl, site.contact.vk, githubUrl].filter(Boolean),
+  },
+])
 </script>
 
 <template>

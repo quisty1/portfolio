@@ -12,7 +12,8 @@ export interface SiteConfig {
   name: string
   nameEn: string
   role: string
-  cvPath: string
+  /** Put PDF at public/cv/... and set this path to enable CV buttons */
+  cvPath?: string
   contact: SiteContact
 }
 
@@ -26,7 +27,7 @@ export const siteConfig: SiteConfig = {
     phone: '+79049593922',
     phoneDisplay: '+7 (904) 959-39-22',
     telegram: '@yar_bragin',
-    telegramUrl: 'https://t.me/yar_bragin',
+    telegramUrl: 'https://telegram.me/yar_bragin',
     vk: 'https://vk.com/yar1qqq',
     location: 'Moscow',
   },

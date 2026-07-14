@@ -1,7 +1,7 @@
-import { describe, expect, it } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { describe, expect, it } from 'vitest'
+import { projects } from '../app/entities/project/model/data'
 import ProjectCard from '../app/entities/project/ui/ProjectCard.vue'
-import { projects } from '../app/entities/project/model/types'
 
 describe('ProjectCard', () => {
   it('renders project title key content', async () => {

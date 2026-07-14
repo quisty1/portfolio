@@ -1,13 +1,22 @@
 import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath } from 'node:url'
+import { projectIds } from './app/entities/project/model/data'
 
 const srcDir = fileURLToPath(new URL('./app', import.meta.url))
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://bragin.dev'
+
+const projectRoutes = projectIds.flatMap((id) => [`/projects/${id}`, `/en/projects/${id}`])
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
   srcDir: 'app',
+
+  devServer: {
+    host: '127.0.0.1',
+    port: 3000,
+  },
 
   alias: {
     '@shared': `${srcDir}/shared`,
@@ -18,15 +27,13 @@ export default defineNuxtConfig({
 
   typescript: {
     strict: true,
-    typeCheck: false,
+    typeCheck: true,
   },
 
   css: ['~/assets/styles/main.css'],
 
   modules: [
-    '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
     '@nuxtjs/sitemap',
@@ -42,12 +49,7 @@ export default defineNuxtConfig({
   ],
 
   imports: {
-    dirs: [
-      'shared/composables',
-      'shared/lib',
-      'features/**/lib',
-      'entities/**/model',
-    ],
+    dirs: ['shared/composables', 'shared/lib', 'features/**/lib', 'entities/**/model'],
   },
 
   vite: {
@@ -69,6 +71,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    baseUrl: siteUrl,
     locales: [
       { code: 'ru', language: 'ru-RU', name: 'Русский', file: 'ru.json' },
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
@@ -84,7 +87,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://bragin.dev',
+    url: siteUrl,
     name: 'Yaroslav Bragin',
   },
 
@@ -92,14 +95,9 @@ export default defineNuxtConfig({
     autoLastmod: true,
   },
 
-  image: {
-    quality: 80,
-    format: ['webp', 'avif'],
-  },
-
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://bragin.dev',
+      siteUrl,
       githubUrl: process.env.NUXT_PUBLIC_GITHUB_URL || '',
     },
   },
@@ -119,7 +117,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/en', '/projects/gau-admin', '/projects/elros', '/en/projects/gau-admin', '/en/projects/elros'],
+      routes: ['/', '/en', ...projectRoutes],
     },
   },
 })

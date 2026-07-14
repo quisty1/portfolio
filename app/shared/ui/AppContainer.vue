@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface AppContainerProps {
-  as?: string
+  as?: keyof HTMLElementTagNameMap
   size?: 'default' | 'narrow' | 'wide'
 }
 
@@ -17,10 +17,7 @@ const sizeClasses: Record<NonNullable<AppContainerProps['size']>, string> = {
 </script>
 
 <template>
-  <component
-    :is="as"
-    :class="cn('mx-auto w-full px-5 sm:px-8', sizeClasses[size])"
-  >
+  <component :is="as" :class="cn('mx-auto w-full px-5 sm:px-8', sizeClasses[size])">
     <slot />
   </component>
 </template>

@@ -1,15 +1,15 @@
 # Portfolio — Yaroslav Bragin
 
-Production-ready personal portfolio for a Middle+/Senior Vue Frontend Developer.
+Personal portfolio for a Middle+/Senior Vue Frontend Developer.
 
 Live content is based on real commercial experience: enterprise admin panels, real-time monitoring UI, tourism ecosystems, Vue 2→3 / JS→TS migrations.
 
 ## Stack
 
-- **Nuxt 4** + Vue 3 + TypeScript (strict)
+- **Nuxt 4** + Vue 3 + TypeScript (strict, type-checked builds)
 - **Tailwind CSS 4** + CSS variables (light/dark)
-- **Pinia**, **VueUse**, **Nuxt Image**, **Nuxt Fonts**
-- **@nuxtjs/i18n** (RU / EN)
+- **VueUse**, **Nuxt Fonts**
+- **@nuxtjs/i18n** (RU / EN) with hreflang via `baseUrl`
 - **@nuxtjs/color-mode**
 - **@nuxtjs/sitemap**
 - **ESLint** + **Prettier**
@@ -20,11 +20,11 @@ Live content is based on real commercial experience: enterprise admin panels, re
 - Feature-Sliced Design architecture
 - Light / dark theme with smooth transitions
 - Russian and English locales (`/` and `/en`)
-- Scroll reveal animations with `prefers-reduced-motion` support
-- SEO: title, description, Open Graph, favicon, sitemap, robots
+- Scroll reveal animations with `prefers-reduced-motion` and no-JS fallback
+- SEO: title, description, Open Graph, JSON-LD, canonical, favicon, sitemap, robots
 - SSG-ready (`nuxt generate`)
 - Case study pages for key projects
-- CV download
+- CV download (`public/cv/bragin-yaroslav.pdf`)
 
 ## Install
 
@@ -73,7 +73,7 @@ app/
   shared/                # ui, config, composables, lib
   assets/styles/         # design tokens + Tailwind
 locales/                 # ru.json, en.json
-public/                  # favicon, og, cv, robots
+public/                  # favicon, og, robots (+ optional cv/)
 tests/
 ```
 
@@ -83,19 +83,19 @@ Dependency rule: `app → pages → widgets → features → entities → shared
 
 Place captures into [`docs/screenshots`](docs/screenshots) after a local run:
 
-| File | Description |
-|------|-------------|
-| `home-light.png` | Light theme, first viewport |
-| `home-dark.png` | Dark theme |
-| `project-detail.png` | Case study page |
-| `mobile.png` | Mobile layout |
+| File                 | Description                 |
+| -------------------- | --------------------------- |
+| `home-light.png`     | Light theme, first viewport |
+| `home-dark.png`      | Dark theme                  |
+| `project-detail.png` | Case study page             |
+| `mobile.png`         | Mobile layout               |
 
 ## Environment
 
 See [`.env.example`](.env.example):
 
-- `NUXT_PUBLIC_SITE_URL` — canonical site URL for SEO/sitemap
-- `NUXT_PUBLIC_GITHUB_URL` — optional GitHub link
+- `NUXT_PUBLIC_SITE_URL` — canonical site URL for SEO/sitemap (also update `public/robots.txt` Sitemap line if you change the domain)
+- `NUXT_PUBLIC_GITHUB_URL` — optional GitHub profile link in Contact
 
 ## License
 

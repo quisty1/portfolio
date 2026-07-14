@@ -5,7 +5,7 @@ import { useScrollReveal } from '../lib/useScrollReveal'
 interface ScrollRevealProps {
   variant?: RevealVariant
   delay?: number
-  as?: string
+  as?: keyof HTMLElementTagNameMap
 }
 
 const props = withDefaults(defineProps<ScrollRevealProps>(), {
