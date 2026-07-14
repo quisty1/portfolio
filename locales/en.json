@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "title": "Yaroslav Bragin — Vue Frontend Developer",
+    "description": "Portfolio of a Vue Frontend developer: enterprise apps, real-time UI, migrations, and Vue 3 + TypeScript architecture."
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Case studies",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact",
+    "home": "Home"
+  },
+  "hero": {
+    "name": "Yaroslav Bragin",
+    "role": "Vue Frontend Developer",
+    "lead": "I build and maintain complex SPAs with Vue 3 + TypeScript — from enterprise admin panels to product ecosystems.",
+    "ctaContact": "Get in touch",
+    "ctaCv": "Download CV",
+    "location": "Moscow · remote / hybrid / on-site"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Frontend focused on architecture and product",
+    "description": "Frontend developer with 3+ years of commercial experience. I specialize in building and maintaining products of any complexity — from greenfield work to deep legacy refactoring.",
+    "points": {
+      "0": "I design modular architecture and reusable UI libraries",
+      "1": "I build real-time interfaces with WebSocket, SSE, and polling",
+      "2": "Migrations Vue 2→3, JS→TS, Vuex→Pinia without stopping delivery",
+      "3": "Ready for hard problems and continuous skill growth"
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Career track",
+    "description": "3 years 6 months of commercial Vue development.",
+    "gau": {
+      "company": "GAU Digitalization Center of Education",
+      "role": "Vue Frontend Developer",
+      "period": "March 2025 — Present",
+      "location": "Moscow",
+      "highlights": {
+        "0": "Designed an enterprise Vue 3 + Pinia app with 15+ admin modules",
+        "1": "Cut diagnostics from minutes to seconds via real-time monitoring",
+        "2": "Built a UI library of 15+ components and an advanced Markdown editor",
+        "3": "Shipped RBAC and a centralized Axios client covering 96+ API endpoints"
+      }
+    },
+    "elros": {
+      "company": "ElRos",
+      "role": "Vue Frontend Developer",
+      "period": "February 2023 — February 2025",
+      "location": "Vladimir",
+      "highlights": {
+        "0": "Grew a B2B/B2C tourism service ecosystem",
+        "1": "Decomposed monoliths and delivered 50+ reusable components",
+        "2": "Migrated the product from Vue 2 to Vue 3 and JavaScript to TypeScript",
+        "3": "Integrated payments and geolocation, improved page load performance"
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Case studies",
+    "title": "Selected work",
+    "description": "Production products without public demos — presented as engineering case studies.",
+    "readMore": "Read more",
+    "back": "Back to cases",
+    "stack": "Stack",
+    "highlights": "Key outcomes",
+    "companySite": "Company site",
+    "gau": {
+      "title": "Monitoring & integrations admin panel",
+      "description": "Enterprise admin panel for exchange monitoring, MESH.NSI integrations, and real-time data operations.",
+      "role": "Frontend developer · Vue 3",
+      "period": "2025 — present",
+      "highlights": {
+        "architecture": "Modular Composition API + Pinia + Vue Router architecture",
+        "realtime": "Monitoring via WebSocket, SSE, and HTTP polling with status UI",
+        "library": "Library of tables, forms, autocomplete, JSON viewer, and Markdown editor",
+        "markdown": "Live-preview editor with 8-language highlighting and Mermaid diagrams",
+        "rbac": "Multi-level RBAC: roles, feature flags, guards, and URL permissions",
+        "api": "Centralized HTTP client with 401 handling and toast notifications"
+      },
+      "detailLead": "A case about designing a complex internal product: delivery speed, access control, and system observability."
+    },
+    "elros": {
+      "title": "Tourism B2B/B2C ecosystem",
+      "description": "Customer-facing web app and organizer admin panel for a tourism service.",
+      "role": "Frontend developer · Vue",
+      "period": "2023 — 2025",
+      "highlights": {
+        "ecosystem": "Tour and booking UI with strong performance and responsiveness",
+        "components": "50+ reusable components after legacy decomposition",
+        "migration": "Vue 2 → Vue 3 migration with Composition API",
+        "typescript": "Module migration to TypeScript: fewer runtime errors",
+        "integrations": "Payment and geolocation integrations",
+        "performance": "Faster page loads and critical legacy bugfixing"
+      },
+      "detailLead": "A case about product evolution: component systems, stack migrations, and market-ready features."
+    }
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Technology profile",
+    "description": "The stack I use in day-to-day product work.",
+    "groups": {
+      "core": "Core",
+      "state": "State & routing",
+      "ui": "UI & design",
+      "tooling": "Tooling",
+      "quality": "Quality & data"
+    },
+    "languages": "Languages",
+    "ru": "Russian — native",
+    "en": "English — B2"
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Studies",
+    "description": "Technical foundation in IT and applied informatics.",
+    "vlgu": {
+      "title": "Applied Informatics",
+      "institution": "Vladimir State University",
+      "period": "Until 2029",
+      "degree": "Higher education"
+    },
+    "college": {
+      "title": "Network and system administration",
+      "institution": "Vladimir Polytechnic College",
+      "period": "2025",
+      "degree": "Vocational"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about the role",
+    "description": "Open to Middle+/Senior Vue Frontend opportunities. Reach out via Telegram or email.",
+    "email": "Email",
+    "telegram": "Telegram",
+    "phone": "Phone",
+    "copy": "Copy",
+    "copied": "Copied",
+    "downloadCv": "Download CV"
+  },
+  "footer": {
+    "built": "Built with Nuxt · Vue · TypeScript",
+    "rights": "Yaroslav Bragin"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This route does not exist. Head back home.",
+    "cta": "Go home"
+  }
+}
