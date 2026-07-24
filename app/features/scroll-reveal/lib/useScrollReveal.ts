@@ -1,9 +1,18 @@
+/**
+ * Scroll-reveal: IntersectionObserver + CSS-классы из main.css
+ * При prefers-reduced-motion элемент сразу считается видимым
+ */
+
 export type RevealVariant = 'fade' | 'slide' | 'slide-left'
 
 export interface UseScrollRevealOptions {
+  /** Какой CSS-класс применить: reveal / reveal-fade / reveal-slide-left */
   variant?: RevealVariant
+  /** Задержка анимации в ms → CSS-var --reveal-delay */
   delay?: number
+  /** Доля видимости цели для срабатывания observer */
   threshold?: number
+  /** Смещение root: отрицательный bottom включает анимацию чуть раньше */
   rootMargin?: string
 }
 
@@ -38,6 +47,7 @@ export function useScrollReveal(options: UseScrollRevealOptions = {}) {
       return
     }
 
+    // Одноразовый observer: после первого появления отписываемся
     const { stop } = useIntersectionObserver(
       target,
       ([entry]) => {

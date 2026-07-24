@@ -1,17 +1,24 @@
+/**
+ * SEO для страницы: title, description, Open Graph, Twitter, canonical
+ * Значения могут быть ref/getter — подхватываются через toValue
+ */
 import type { MaybeRefOrGetter } from 'vue'
 
 export interface PageSeoOptions {
   title: MaybeRefOrGetter<string>
   description: MaybeRefOrGetter<string>
+  /** Путь страницы относительно origin, например /projects/foo или / */
   path: MaybeRefOrGetter<string>
   ogType?: MaybeRefOrGetter<'website' | 'article'>
 }
 
+/** OG/Twitter image из public/ */
 const OG_IMAGE = '/og-image.png'
 
 export function usePageSeo(options: PageSeoOptions) {
   const { siteUrl } = usePortfolioSite()
 
+  // Absolute URL для canonical и og:url
   const pageUrl = computed(() => {
     const path = toValue(options.path)
     if (!path || path === '/') {

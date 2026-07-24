@@ -1,3 +1,7 @@
+/**
+ * Вставка JSON-LD (schema.org) в <head> через useHead
+ * schema реактивен: при смене locale/данных скрипт пересобирается
+ */
 import type { MaybeRefOrGetter } from 'vue'
 
 export function useJsonLd(

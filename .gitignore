@@ -1,4 +1,4 @@
-# Nuxt dev/build outputs
+# Nuxt: артефакты сборки и кэш
 .output
 .data
 .nuxt
@@ -7,24 +7,24 @@
 dist
 coverage
 
-# Node dependencies
+# Зависимости Node
 node_modules
 
-# Logs
+# Логи
 logs
 *.log
 
-# Misc
+# Служебные файлы редакторов/ОС
 .DS_Store
 .fleet
 .idea
 *.local
 
-# Local env files
+# Локальные env; .env.example оставляем в репозитории как шаблон
 .env
 .env.*
 !.env.example
 
-# Test / editor
+# Настройки VS Code локальные; recommended extensions можно закоммитить
 .vscode/*
 !.vscode/extensions.json

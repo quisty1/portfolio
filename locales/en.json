@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Yaroslav Bragin — Vue Frontend Developer",
-    "description": "Portfolio of a Vue Frontend developer: enterprise apps, real-time UI, migrations, and Vue 3 + TypeScript architecture."
+    "description": "Portfolio of a Vue Frontend developer: enterprise SPAs, admin systems, real-time UI, and Vue 3 + TypeScript architecture."
   },
   "nav": {
     "about": "About",
@@ -15,7 +15,7 @@
   "hero": {
     "name": "Yaroslav Bragin",
     "role": "Vue Frontend Developer",
-    "lead": "I build and maintain complex SPAs with Vue 3 + TypeScript — from enterprise admin panels to product ecosystems.",
+    "lead": "I build and maintain enterprise SPAs with Vue, Nuxt, and TypeScript — admin systems and client apps with complex business logic.",
     "ctaContact": "Get in touch",
     "ctaCv": "Download CV",
     "location": "Moscow · remote / hybrid / on-site"
@@ -23,12 +23,12 @@
   "about": {
     "eyebrow": "About",
     "title": "Frontend focused on architecture and product",
-    "description": "Frontend developer with 3+ years of commercial experience. I specialize in building and maintaining products of any complexity — from greenfield work to deep legacy refactoring.",
+    "description": "Frontend developer with 3+ years of commercial experience building web apps with Vue.js, Nuxt, and TypeScript. I specialize in developing, maintaining, and refactoring enterprise SPAs, admin systems, and client applications with complex business logic.",
     "points": {
-      "0": "I design modular architecture and reusable UI libraries",
-      "1": "I build real-time interfaces with WebSocket, SSE, and polling",
-      "2": "Migrations Vue 2→3, JS→TS, Vuex→Pinia without stopping delivery",
-      "3": "Ready for hard problems and continuous skill growth"
+      "0": "Enterprise SPAs and admin systems with complex business logic",
+      "1": "Client apps: catalogs, payments, maps, and real-time interfaces",
+      "2": "Non-trivial architecture: migrations, RBAC, modular UI systems",
+      "3": "Looking for a role where I can grow and influence the product"
     }
   },
   "experience": {
@@ -36,15 +36,15 @@
     "title": "Career track",
     "description": "3 years 6 months of commercial Vue development.",
     "gau": {
-      "company": "GAU Digitalization Center of Education",
+      "company": "Moscow GAU «Center for Digitalization of Education»",
       "role": "Vue Frontend Developer",
       "period": "March 2025 — Present",
       "location": "Moscow",
       "highlights": {
-        "0": "Designed an enterprise Vue 3 + Pinia app with 15+ admin modules",
-        "1": "Cut diagnostics from minutes to seconds via real-time monitoring",
-        "2": "Built a UI library of 15+ components and an advanced Markdown editor",
-        "3": "Shipped RBAC and a centralized Axios client covering 96+ API endpoints"
+        "0": "Designed Keeper’s modular Vue 3 + Pinia architecture with 15+ admin modules",
+        "1": "Cut diagnostics from minutes to seconds via WebSocket, SSE, and polling monitoring",
+        "2": "Migrated management registers from Vue 2 / Vuex / JS / Vuetify 2 to Vue 3 / Pinia / TypeScript / Vuetify 4",
+        "3": "Shipped fine-grained RBAC and an API client for 100+ endpoints with OAuth and refresh token"
       }
     },
     "elros": {
@@ -53,10 +53,10 @@
       "period": "February 2023 — February 2025",
       "location": "Vladimir",
       "highlights": {
-        "0": "Grew a B2B/B2C tourism service ecosystem",
-        "1": "Decomposed monoliths and delivered 50+ reusable components",
-        "2": "Migrated the product from Vue 2 to Vue 3 and JavaScript to TypeScript",
-        "3": "Integrated payments and geolocation, improved page load performance"
+        "0": "Built a B2B/B2C tourism platform: customer app and admin on a shared REST API",
+        "1": "Implemented a Canvas venue-layout editor and seat selection for client and admin",
+        "2": "Grew an admin system of 40+ business modules with RBAC for eight roles",
+        "3": "Maintained a taxi dispatch Vue 2 SPA: 26 Vuex modules, WebSocket, and JWT"
       }
     }
   },
@@ -70,49 +70,64 @@
     "highlights": "Key outcomes",
     "companySite": "Company site",
     "gau": {
-      "title": "Monitoring & integrations admin panel",
-      "description": "Enterprise admin panel for exchange monitoring, MESH.NSI integrations, and real-time data operations.",
+      "title": "Keeper — data exchange platform admin panel",
+      "description": "Enterprise SPA for exchange jobs, integration monitoring, reports, and admin of Redis, RabbitMQ, Kafka, ETL, and the scheduler via backend API.",
       "role": "Frontend developer · Vue 3",
       "period": "2025 — present",
       "highlights": {
-        "architecture": "Modular Composition API + Pinia + Vue Router architecture",
-        "realtime": "Monitoring via WebSocket, SSE, and HTTP polling with status UI",
-        "library": "Library of tables, forms, autocomplete, JSON viewer, and Markdown editor",
-        "markdown": "Live-preview editor with 8-language highlighting and Mermaid diagrams",
-        "rbac": "Multi-level RBAC: roles, feature flags, guards, and URL permissions",
-        "api": "Centralized HTTP client with 401 handling and toast notifications"
+        "architecture": "Modular Vue 3, Composition API, Pinia, and Vue Router architecture with 15+ admin modules",
+        "realtime": "Monitoring via WebSocket, SSE, and HTTP polling with connection management and UI status",
+        "library": "Library of 15+ components: tables, forms, autocomplete, JSON viewer, and Markdown editor",
+        "markdown": "Markdown editor with live preview, 8-language highlighting, Mermaid, task lists, and footnotes",
+        "grouping": "useFolderGrouping composable: tree grouping, locale-aware sort, and expanded-node state",
+        "api": "RBAC for 4 roles and 13 feature flags, EKIS ESA OAuth, and an API client for 100+ endpoints"
       },
-      "detailLead": "A case about designing a complex internal product: delivery speed, access control, and system observability."
+      "detailLead": "A case about an enterprise admin panel: modular architecture, integration observability, and secure access."
     },
     "gauHr": {
-      "title": "HR management registers",
-      "description": "SPA for HR: employee registers, interactive cards, Excel import/export, and role-based access.",
+      "title": "Management registers",
+      "description": "Corporate SPA for Moscow education system management registers: employee and organization cards, appointments, change history, reporting, and access control.",
       "role": "Frontend developer · Vue 3",
       "period": "2025 — present",
       "highlights": {
-        "spa": "Vue 3 + Pinia + Vue Router SPA with responsive UI and dark/light theme on Vuetify 4",
-        "card": "Interactive employee card with sections — view and edit without page switches",
-        "rbac": "RBAC: register filtering by groups, route guards, and role-based conditional rendering",
-        "admin": "Admin panel: Excel import with duplicates, cache, bulk edits, and export",
-        "filters": "Advanced filtering with instant updates and persisted filter state",
-        "migration": "Vuex → Pinia and Vuetify 3 → 4 migrations with a shared design standard"
+        "migration": "Stepwise migration Vue 2 / Vuex / JavaScript / Vuetify 2 → Vue 3 / Pinia / TypeScript / Vuetify 4",
+        "registers": "Three registers sharing lists, filters, and cards, with search and file uploads",
+        "ux": "URL-synced filters and pagination; scroll and DOM preserved via RouteShell and keep-alive",
+        "rbac": "Fine-grained RBAC: route guards, register filtering, conditional UI, and PII masking",
+        "api": "Centralized Axios layer with typed endpoints, read-only directory cache, and toast errors",
+        "shared": "Reusable mixins and shared components; themes, design tokens, and Vuetify global defaults"
       },
-      "detailLead": "A case about an HR product: ease of personnel work, access control, and stack migrations without stopping delivery."
+      "detailLead": "A case about migrating a legacy HR product: shared register shell, permission-based access, and large lists."
     },
     "elros": {
-      "title": "Tourism B2B/B2C ecosystem",
-      "description": "Customer-facing web app and organizer admin panel for a tourism service.",
+      "title": "Tourism B2B/B2C service",
+      "description": "Platform with a customer ticket-purchase app and an admin system for organizations, events, orders, and content.",
       "role": "Frontend developer · Vue",
       "period": "2023 — 2025",
       "highlights": {
-        "ecosystem": "Tour and booking UI with strong performance and responsiveness",
-        "components": "50+ reusable components after legacy decomposition",
-        "migration": "Vue 2 → Vue 3 migration with Composition API",
-        "typescript": "Module migration to TypeScript: fewer runtime errors",
-        "integrations": "Payment and geolocation integrations",
-        "performance": "Faster page loads and critical legacy bugfixing"
+        "apps": "Linked frontend apps on a shared REST API: customer service and admin",
+        "commerce": "Event catalog and search, favorites, cart, orders, promo codes, and family accounts",
+        "payments": "SberPay payments and object display on Yandex Maps",
+        "canvas": "Interactive seat selection and venue-layout editor on Canvas API for client and admin",
+        "admin": "Admin system of 40+ business modules with RBAC for eight roles",
+        "content": "Analytics, CKEditor 5 content editor, and reusable tables"
       },
-      "detailLead": "A case about product evolution: component systems, stack migrations, and market-ready features."
+      "detailLead": "A case about a product ecosystem: ticket purchase, venue layouts, and organizer admin on one API."
+    },
+    "elrosTaxi": {
+      "title": "Taxi fleet dispatch",
+      "description": "Vue 2 SPA for taxi fleet operations: orders, drivers, shifts, tickets, chats, photo reports, users, and directories.",
+      "role": "Frontend developer · Vue 2",
+      "period": "2023 — 2025",
+      "highlights": {
+        "monolith": "Most of a monolithic SPA frontend with 26 Vuex modules and separate layouts",
+        "auth": "JWT auth with refresh token and access control for five roles",
+        "realtime": "WebSocket updates for chats, orders, alerts, tickets, photo reports, and driver status",
+        "orders": "Order and route management interfaces",
+        "maps": "Driver map with clustering, live geo updates, and DaData address suggestions",
+        "ops": "XLSX reports and shift work calendars"
+      },
+      "detailLead": "A case about an operational Vue 2 SPA: domain state, real-time dispatch, and a driver map."
     }
   },
   "skills": {
@@ -150,7 +165,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Let's talk about the role",
-    "description": "Open to Middle+/Senior Vue Frontend opportunities. Reach out via Telegram or email.",
+    "description": "Open to Vue projects with complex architecture. Reach out via Telegram or email.",
     "email": "Email",
     "telegram": "Telegram",
     "phone": "Phone",

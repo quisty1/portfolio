@@ -1,8 +1,17 @@
+/**
+ * Статический конфиг сайта: имя, роль, контакты, путь к CV
+ * Не зависит от runtime env — URL сайта берётся из usePortfolioSite
+ */
+
 export interface SiteContact {
   email: string
+  /** E.164 / tel: ссылка без пробелов */
   phone: string
+  /** Человекочитаемый формат для UI */
   phoneDisplay: string
+  /** Ник для отображения */
   telegram: string
+  /** Полный URL мессенджера */
   telegramUrl: string
   vk: string
   location: string
@@ -12,7 +21,7 @@ export interface SiteConfig {
   name: string
   nameEn: string
   role: string
-  /** Put PDF at public/cv/... and set this path to enable CV buttons */
+  /** PDF в public/cv/... — без пути кнопки CV скрываются */
   cvPath?: string
   contact: SiteContact
 }

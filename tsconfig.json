@@ -1,4 +1,6 @@
 {
+  // Корневой tsconfig только ссылается на сгенерированные Nuxt-конфиги
+  // После nuxt prepare появляются .nuxt/tsconfig.*.json — править их не нужно
   // https://nuxt.com/docs/guide/concepts/typescript
   "files": [],
   "references": [

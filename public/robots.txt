@@ -1,4 +1,6 @@
+# Разрешаем индексацию всего сайта
 User-agent: *
 Allow: /
 
+# URL sitemap должен совпадать с NUXT_PUBLIC_SITE_URL
 Sitemap: https://bragin.dev/sitemap.xml

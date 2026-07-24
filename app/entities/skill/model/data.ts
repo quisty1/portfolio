@@ -4,7 +4,7 @@ export const skillGroups: SkillGroup[] = [
   {
     id: 'core',
     titleKey: 'skills.groups.core',
-    items: ['JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Vue', 'Nuxt'],
+    items: ['JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Vue', 'Nuxt', 'SPA'],
   },
   {
     id: 'state',
@@ -19,11 +19,21 @@ export const skillGroups: SkillGroup[] = [
   {
     id: 'tooling',
     titleKey: 'skills.groups.tooling',
-    items: ['Vite', 'Webpack', 'ESLint', 'Prettier', 'Git', 'Docker', 'Node.js'],
+    items: ['Vite', 'Webpack', 'ESLint', 'Prettier', 'Git', 'Docker', 'Node.js', 'CI/CD'],
   },
   {
     id: 'quality',
     titleKey: 'skills.groups.quality',
-    items: ['Vitest', 'Jest', 'Playwright', 'Cypress', 'REST API', 'Axios'],
+    items: [
+      'Vitest',
+      'Jest',
+      'Playwright',
+      'Cypress',
+      'REST API',
+      'Axios',
+      'WebSocket',
+      'Scrum',
+      'Agile',
+    ],
   },
 ]

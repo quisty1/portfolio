@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+/* Design tokens → Tailwind @theme (bg-surface, text-ink, font-display и т.д.) */
 @theme {
   --font-display: 'Outfit', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
@@ -15,6 +16,7 @@
   --color-accent-ink: var(--accent-ink);
 }
 
+/* Светлая тема (дефолт) */
 :root {
   --surface: #f7f8f6;
   --surface-elevated: #ffffff;
@@ -28,6 +30,7 @@
   color-scheme: light;
 }
 
+/* Тёмная тема: класс .dark на <html> от @nuxtjs/color-mode */
 .dark {
   --surface: #0e1110;
   --surface-elevated: #161a18;
@@ -46,6 +49,7 @@
     scroll-behavior: smooth;
   }
 
+  /* a11y: почти отключаем анимации при prefers-reduced-motion */
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
@@ -78,6 +82,7 @@
   }
 }
 
+/* Переходы страниц: имя 'page' в nuxt.config app.pageTransition */
 .page-enter-active,
 .page-leave-active {
   transition:
@@ -91,6 +96,7 @@
   transform: translateY(6px);
 }
 
+/* Scroll-reveal: классы из useScrollReveal; видимость через .is-visible */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -129,6 +135,7 @@
   transform: translateX(0);
 }
 
+/* Без JS контент сразу видим (noscript / SSR без гидрации) */
 @media (scripting: none) {
   .reveal,
   .reveal-fade,

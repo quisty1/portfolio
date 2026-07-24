@@ -1,3 +1,6 @@
+/**
+ * Unit-тесты утилиты cn (clsx + tailwind-merge)
+ */
 import { describe, expect, it } from 'vitest'
 import { cn } from '../app/shared/lib/cn'
 

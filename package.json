@@ -14,7 +14,8 @@
     "format:check": "prettier --check .",
     "typecheck": "nuxt typecheck",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.14.0",
@@ -31,6 +32,7 @@
     "@nuxt/test-utils": "^4.0.3",
     "@tailwindcss/vite": "^4.3.2",
     "@types/node": "^25.5.0",
+    "@vitest/coverage-v8": "^4.1.10",
     "@vue/test-utils": "^2.4.11",
     "clsx": "^2.1.1",
     "eslint": "^10.7.0",
